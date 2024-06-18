@@ -1,0 +1,20 @@
+{
+  "name": "ing_de_soft_tp",
+  "version": "1.0.0",
+  "description": "Este repositorio contiene dos ejemplos de scripts en Python que demuestran cómo manejar consultas a una base de datos SQLite de forma segura y de forma insegura. Los ejemplos muestran cómo prevenir inyecciones de código (inyección SQL) y cómo un manejo incorrecto puede permitir tales ataques.",
+  "main": "index.js",
+  "scripts": {
+    "exec:insecure": "ts-node insecure_script_poc.ts",
+    "exec:secure": "ts-node secure_script_poc.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}

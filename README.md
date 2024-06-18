@@ -1,24 +1,21 @@
-# Prevención de Inyección de Código en Python
+Aquí tienes el `README.md` adaptado para ejecutar los scripts traducidos a TypeScript:
 
-Este repositorio contiene dos ejemplos de scripts en Python que demuestran cómo manejar consultas a una base de datos SQLite de forma segura y de forma insegura. Los ejemplos muestran cómo prevenir inyecciones de código (inyección SQL) y cómo un manejo incorrecto puede permitir tales ataques.
+# Prevención de Inyección de Código en TypeScript
+
+Este repositorio contiene dos ejemplos de scripts en TypeScript que demuestran cómo manejar consultas a una base de datos SQLite de forma segura y de forma insegura. Los ejemplos muestran cómo prevenir inyecciones de código (inyección SQL) y cómo un manejo incorrecto puede permitir tales ataques.
 
 ## Contenido
 
-1. `secure_script_poc.py`: Ejemplo de consultas seguras utilizando consultas preparadas para prevenir inyecciones SQL.
-2. `insecure_script_poc_poc.py`: Ejemplo de consultas inseguras que son vulnerables a inyecciones SQL.
+1. `secure_script_poc.ts`: Ejemplo de consultas seguras utilizando consultas preparadas para prevenir inyecciones SQL.
+2. `insecure_script_poc.ts`: Ejemplo de consultas inseguras que son vulnerables a inyecciones SQL.
 
 ## Requisitos
 
-- Python 3.x
-- SQLite (incluido en la biblioteca estándar de Python)
+- Node.js
+- TypeScript
+- SQLite3 (módulo npm)
 
-## Ejecución
-
-### Script Seguro (`secure_script_poc.py`)
-
-Este script demuestra cómo proteger una aplicación contra inyecciones SQL utilizando consultas preparadas.
-
-#### Cómo Ejecutar
+## Instalación
 
 1. Clona este repositorio:
     ```bash
@@ -26,10 +23,35 @@ Este script demuestra cómo proteger una aplicación contra inyecciones SQL util
     cd ing_de_soft_tp
     ```
 
-2. Ejecuta el script:
+2. Instala las dependencias necesarias:
     ```bash
-    python secure_script_poc.py
+    npm install
     ```
+
+## Ejecución
+
+### Script Seguro (`secure_script_poc.ts`)
+
+Este script demuestra cómo proteger una aplicación contra inyecciones SQL utilizando consultas preparadas.
+
+#### Cómo Ejecutar
+
+1. Ejecutar directamente codigo Typescript con ts-node:
+    ```bash
+    # Ejectuar secure_script_poc.ts
+    npm run exec:secure
+    ```
+
+2. Ejecutar transpilando typescript a javascript:
+   1. Transpila el código TypeScript a JavaScript:
+       ```bash
+       npx tsc secure_script_poc.ts
+       ```
+
+   2. Ejecuta el script:
+       ```bash
+       node secure_script_poc.js
+       ```
 
 #### Explicación
 
@@ -40,22 +62,28 @@ El script realiza las siguientes acciones:
 - Demuestra el uso seguro de las funciones con entradas válidas e intentos de inyección SQL, los cuales son prevenidos.
 - Muestra el estado de las tablas después de los intentos de inyección para verificar que no se realizaron cambios maliciosos.
 
-### Script Inseguro (`insecure_script_poc.py`)
+### Script Inseguro (`insecure_script_poc.ts`)
 
 Este script demuestra cómo las consultas sin preparación son vulnerables a inyecciones SQL.
 
 #### Cómo Ejecutar
 
-1. Clona este repositorio:
+1. Ejecutar directamente codigo Typescript con ts-node:
     ```bash
-    git clone https://github.com/ralcorta/ing_de_soft_tp.git
-    cd ing_de_soft_tp
+    # Ejectuar insecure_script_poc.ts
+    npm run exec:insecure
     ```
 
-2. Ejecuta el script:
-    ```bash
-    python insecure_script_poc.py
-    ```
+2. Ejecutar transpilando typescript a javascript:
+   1. Transpila el código TypeScript a JavaScript:
+       ```bash
+       npx tsc insecure_script_poc.ts
+       ```
+
+   2. Ejecuta el script:
+       ```bash
+       node insecure_script_poc.js
+       ```
 
 #### Explicación
 
